@@ -2,7 +2,7 @@ import { useParams } from "react-router-dom"
 import useFetch from "../useFetch";
 export default function ListingDetails(){
     const listingId = useParams();
-    const {data, loading, error} = useFetch(`http://localhost:3000/listings/${listingId.id}`);
+    const {data, loading, error} = useFetch(`https://events-listing-backend.vercel.app/listings/${listingId.id}`);
         if (loading) return <p>Loading...</p>;
         if (error) return <p>Error: {error}</p>;
         if (!data) return <p>No Listing with the given id {listingId.id} found</p>;
