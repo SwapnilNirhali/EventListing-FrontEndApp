@@ -35,7 +35,7 @@ const filteredByType =
     : filteredByType.filter((listing) =>
         listing.eventName?.toLowerCase().includes(listingName.toLowerCase().trim()) ||  
        listing.eventTag?.some(tag =>
-          tag.toLowerCase().includes(searchTerm)
+          tag.toLowerCase().includes(listingName.toLowerCase().trim())
         )
       );
   return (
