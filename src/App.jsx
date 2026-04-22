@@ -33,9 +33,8 @@ const filteredByType =
   listingName.trim() === ""
     ? filteredByType
     : filteredByType.filter((listing) =>
-        listing.eventName
-          ?.toLowerCase()
-          .includes(listingName.toLowerCase().trim())
+        listing.eventName?.toLowerCase().includes(listingName.toLowerCase().trim()) ||  
+        listing.eventTag?.toLowerCase().includes(listingName.toLowerCase().trim())
       );
   return (
     <>
